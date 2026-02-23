@@ -1,0 +1,17 @@
+{
+  "id": "pong-hand-tracking-scene",
+  "name": "Pong Hand Tracking Scene",
+  "description": "Exported from embedded Flutter VisMan demo scene \"pong-hand-tracking-scene\".",
+  "tags": [
+    "hand",
+    "pong",
+    "scene",
+    "tracking"
+  ],
+  "source": "flutter-embedded-demo",
+  "generatedAt": "2026-02-23T08:11:45.557246Z",
+  "sceneFile": "visman.json",
+  "objectCount": 3,
+  "hasPhysics": true,
+  "has3D": false
+}

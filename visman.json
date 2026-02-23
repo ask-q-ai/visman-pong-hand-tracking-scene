@@ -1,0 +1,88 @@
+{
+  "canvasLayer": [
+    {
+      "id": "ball",
+      "context": "canvas",
+      "type": "circle",
+      "position": {
+        "x": 320,
+        "y": 180
+      },
+      "size": {
+        "radius": 10
+      },
+      "style": {
+        "fillStyle": "#FFFFFF",
+        "strokeStyle": "#CCCCCC",
+        "lineWidth": 1
+      },
+      "physics": {
+        "kinematic": true,
+        "bodyType": "dynamic",
+        "vx": 200,
+        "vy": 150,
+        "bounce": 1.0,
+        "bounded": true
+      },
+      "collision": {
+        "collisionGroups": [
+          "ball"
+        ]
+      }
+    },
+    {
+      "id": "left-paddle",
+      "context": "canvas",
+      "type": "rectangle",
+      "position": {
+        "x": 30,
+        "y": "{{ (@hub.tracker?.hands?.left?.position?.y ?? 0.5) * 270 }}"
+      },
+      "size": {
+        "width": 15,
+        "height": 90
+      },
+      "style": {
+        "fillStyle": "#00FF00",
+        "strokeStyle": "#008800",
+        "lineWidth": 2
+      },
+      "physics": {
+        "kinematic": true,
+        "bodyType": "kinematic"
+      },
+      "collision": {
+        "collisionGroups": [
+          "ball"
+        ]
+      }
+    },
+    {
+      "id": "right-paddle",
+      "context": "canvas",
+      "type": "rectangle",
+      "position": {
+        "x": 595,
+        "y": "{{ (@hub.tracker?.hands?.right?.position?.y ?? 0.5) * 270 }}"
+      },
+      "size": {
+        "width": 15,
+        "height": 90
+      },
+      "style": {
+        "fillStyle": "#FF0000",
+        "strokeStyle": "#880000",
+        "lineWidth": 2
+      },
+      "physics": {
+        "kinematic": true,
+        "bodyType": "kinematic"
+      },
+      "collision": {
+        "collisionGroups": [
+          "ball"
+        ]
+      }
+    }
+  ]
+}
